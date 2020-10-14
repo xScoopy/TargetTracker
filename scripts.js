@@ -32,3 +32,20 @@ black.addEventListener('click', drawDot)
 blue.addEventListener('click', drawDot)
 red.addEventListener('click', drawDot) 
 yellow.addEventListener('click', drawDot) 
+
+//defining function 'calculate'
+function calculate() {
+    const arrow1 = inputArrow1.value
+    const arrow2 = inputArrow2.value
+    const arrow3 = inputArrow3.value
+    const arrow4 = inputArrow4.value
+    const arrow5 = inputArrow5.value
+
+    let totalPoints = arrow1 + arrow2 +arrow3 +arrow4 + arrow5
+    displayTotal.innerHTML = totalPoints
+
+    displayAverage.innerHTML = toFloat(totalPoints/5)
+    displayMax.innerHTML = Math.max([arrow1, arrow2, arrow3, arrow4, arrow5])
+    displayMin.innerHTML = Math.min([arrow1, arrow2, arrow3, arrow4, arrow5])
+    
+}
