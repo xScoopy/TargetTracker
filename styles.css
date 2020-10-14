@@ -95,7 +95,20 @@ canvas{
 /*Flex boxes for entire page*/
 #main-container{
     display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-left: 2em;
+    margin-right: 2em;
+    margin-top: 2em;
+    
+}
+/*arranging form*/
+#arrow-form{
+    display: flex;
     flex-direction: column;
-    justify-content: center;
-    justify-content: space-between;
+    
+}
+/*input spacing*/
+input{
+    margin-bottom: 1em;
 }
