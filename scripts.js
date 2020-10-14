@@ -19,3 +19,11 @@ const inputArrow3 = document.querySelector('#arrow3')
 const inputArrow4 = document.querySelector('#arrow4')
 const inputArrow5 = document.querySelector('#arrow5')
 
+//adding event listeners for output display
+inputArrow1.addEventListener('input', calculate)
+inputArrow2.addEventListener('input', calculate)
+inputArrow3.addEventListener('input', calculate)
+inputArrow4.addEventListener('input', calculate)
+inputArrow5.addEventListener('input', calculate)
+
+//adding event listeners for button clicks on target
