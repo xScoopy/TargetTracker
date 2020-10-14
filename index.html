@@ -1,26 +1,62 @@
 <!DOCTYPE html>
 <html lang='en'>
-    <head>
-        <title>Target Tracker</title>
-        <link rel="stylesheet" href="styles.css">
-    </head>
-    <body>
-        <h1>Target Tracker</h1>
-        <form id='arrow-form'>
-            <label for='arrow1'>Arrow 1</label>
-            <input id='arrow1' type='number' value='0'>
-            <label for='arrow2'>Arrow 2</label>
-            <input id='arrow2' type='number' value='0'>
-            <label for='arrow3'>Arrow 3</label>
-            <input id='arrow3' type='number' value='0'>
-            <label for='arrow4'>Arrow 4</label>
-            <input id='arrow4' type='number' value='0'>
-            <label for='arrow5'>Arrow 5</label>
-            <input id='arrow5' type='number' value='0'>
-            <button>Submit</button>
-        </form>
+
+<head>
+    <title>Target Tracker</title>
+    <!--Link to Stylesheet-->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <h1>Target Tracker</h1>
+    <div id='canvas-wrap'>
+        <canvas height='200px' width='200px'></canvas>
+        <div id='target-grid-container'>
+            <div id='yellow-target'></div>
+            <div id='red-target'></div>
+            <div id='blue-target'></div>
+            <div id='black-target'></div>
+            <div id='white-target'></div>
+        </div>
+    </div>
+
+    <!--Section for possible Target-->
+
+    <!--Form for User Input-->
+    <div id='main-container'>
 
 
-        <script src='scripts.js'></script>
-    </body>
+
+        <section id='form-section'>
+            <form id='arrow-form'>
+                <label for='date-picker'>Date</label>
+                <input id='date-picker' type='date'>
+                <label for='arrow1'>Arrow 1</label>
+                <input id='arrow1' type='number' value='0'>
+                <label for='arrow2'>Arrow 2</label>
+                <input id='arrow2' type='number' value='0'>
+                <label for='arrow3'>Arrow 3</label>
+                <input id='arrow3' type='number' value='0'>
+                <label for='arrow4'>Arrow 4</label>
+                <input id='arrow4' type='number' value='0'>
+                <label for='arrow5'>Arrow 5</label>
+                <input id='arrow5' type='number' value='0'>
+                <button id='submit'>Submit</button>
+            </form>
+        </section>
+        <section id='data-output'>
+            <label for='avg-display'>Average: </label>
+            <p>x</p>
+            <label for='total-display'>Total: </label>
+            <p>x</p>
+            <label for='min-display'>Minimum: </label>
+            <p>x</p>
+            <label for='max-display'>Maximum: </label>
+            <p>x</p>
+        </section>
+    </div>
+    <!--Script to 'scripts.js'-->
+    <script src='scripts.js'></script>
+</body>
+
 </html>

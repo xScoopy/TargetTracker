@@ -1,0 +1,38 @@
+/* Target overlaying canvas for drawing dots*/
+canvas{
+    position: absolute;
+    
+    
+}
+#canvas-wrap{
+    position: 'relative';
+    width: 200px;
+    height: 200px;
+
+}
+#target-grid-container{
+    
+    
+    display: grid;
+    border: 1px solid black;
+    height: 200px;
+    width: 200px;
+    
+    grid-template-columns: repeat(20,1fr);
+    grid-template-rows: repeat(20, 1fr);
+}
+#white-target{
+    background-color: white;
+    grid-column: 1/21;
+    grid-row: 1/21;
+    border-radius: 50%;
+}
+
+
+/*Flex boxes for entire page*/
+#main-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-content: space-between;
+}
