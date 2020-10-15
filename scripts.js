@@ -15,6 +15,7 @@ const black = document.querySelector('#black-target')
 const blue = document.querySelector('#blue-target')
 const red = document.querySelector('#red-target')
 const yellow = document.querySelector('#yellow-target')
+const centerX = document.querySelector('#center-x')
 
 // declaring display output fields
 const displayAverage = document.querySelector('#avg-display')
@@ -43,6 +44,8 @@ black.addEventListener('click', addArrowBlack)
 blue.addEventListener('click', addArrowBlue)
 red.addEventListener('click', addArrowRed) 
 yellow.addEventListener('click', addArrowYellow) 
+centerX.addEventListener('click', addArrowYellow)
+
 
 //defining function 'calculate'
 function calculate() {
@@ -67,35 +70,182 @@ function calculate() {
 //defining function addArrow for each color to add value to the arrow slot that is next in line
 function addArrowWhite(){
     if(clickCount >= 5){
+        calculate()
+        alert('You already have 5 arrows! Refresh the page to do another 5')
         return 
     }
     else if(clickCount == 0 ){
         inputArrow1.value = whiteScore
         clickCount+=1
-        console.log(clickCount)
         calculate()
         return 
     }
     else if(clickCount == 1){
         inputArrow2.value = whiteScore
         clickCount+=1
-        console.log(clickCount)
-        
+        calculate()
         return
     }
     else if(clickCount == 2){
         inputArrow3.value = whiteScore
         clickCount+=1
+        calculate()
         return
     }
     else if(clickCount == 3){
         inputArrow4.value = whiteScore
         clickCount+=1
+        calculate()
         return
     }
     else if(clickCount == 4){
         inputArrow5.value = whiteScore
         clickCount+=1
+        calculate()
+        return
+    }
+}
+function addArrowBlack(){
+    if(clickCount >= 5){
+        alert('You already have 5 arrows! Refresh the page to do another 5')
+        return 
+    }
+    else if(clickCount == 0 ){
+        inputArrow1.value = blackScore
+        clickCount+=1
+        calculate()
+        return 
+    }
+    else if(clickCount == 1){
+        inputArrow2.value = blackScore
+        clickCount+=1
+        calculate()
+        return
+    }
+    else if(clickCount == 2){
+        inputArrow3.value = blackScore
+        clickCount+=1
+        calculate()
+        return
+    }
+    else if(clickCount == 3){
+        inputArrow4.value = blackScore
+        clickCount+=1
+        calculate()
+        return
+    }
+    else if(clickCount == 4){
+        inputArrow5.value = blackScore
+        clickCount+=1
+        calculate()
+        return
+    }
+}
+function addArrowBlue(){
+    if(clickCount >= 5){
+        alert('You already have 5 arrows! Refresh the page to do another 5')
+        return 
+    }
+    else if(clickCount == 0 ){
+        inputArrow1.value = blueScore
+        clickCount+=1
+        calculate()
+        return 
+    }
+    else if(clickCount == 1){
+        inputArrow2.value = blueScore
+        clickCount+=1
+        calculate()
+        return
+    }
+    else if(clickCount == 2){
+        inputArrow3.value = blueScore
+        clickCount+=1
+        calculate()
+        return
+    }
+    else if(clickCount == 3){
+        inputArrow4.value = blueScore
+        clickCount+=1
+        calculate()
+        return
+    }
+    else if(clickCount == 4){
+        inputArrow5.value = blueScore
+        clickCount+=1
+        calculate()
+        return
+    }
+}
+function addArrowRed(){
+    if(clickCount >= 5){
+        alert('You already have 5 arrows! Refresh the page to do another 5')
+        return 
+    }
+    else if(clickCount == 0 ){
+        inputArrow1.value = redScore
+        clickCount+=1
+        calculate()
+        return 
+    }
+    else if(clickCount == 1){
+        inputArrow2.value = redScore
+        clickCount+=1
+        calculate()
+        return
+    }
+    else if(clickCount == 2){
+        inputArrow3.value = redScore
+        clickCount+=1
+        calculate()
+        return
+    }
+    else if(clickCount == 3){
+        inputArrow4.value = redScore
+        clickCount+=1
+        calculate()
+        return
+    }
+    else if(clickCount == 4){
+        inputArrow5.value = redScore
+        clickCount+=1
+        calculate()
+        return
+    }
+}
+function addArrowYellow(){
+    if(clickCount >= 5){
+        alert('You already have 5 arrows! Refresh the page to do another 5')
+        return 
+    }
+    else if(clickCount == 0 ){
+        inputArrow1.value = yellowScore
+        clickCount+=1
+        calculate()
+        return 
+    }
+    else if(clickCount == 1){
+        inputArrow2.value = yellowScore
+        clickCount+=1
+        calculate()
+        return
+    }
+    else if(clickCount == 2){
+        inputArrow3.value = yellowScore
+        clickCount+=1
+        calculate()
+        return
+    }
+    else if(clickCount == 3){
+        inputArrow4.value = yellowScore
+        clickCount+=1
+        calculate()
+        return
+    }
+    else if(clickCount == 4){
+        inputArrow5.value = yellowScore
+        clickCount+=1
+        calculate()
         return
     }
 }
