@@ -98,3 +98,37 @@ function addArrowWhite(){
         return
     }
 }
+function addArrowBlack(){
+    if(clickCount >= 5){
+        return 
+    }
+    else if(clickCount == 0 ){
+        inputArrow1.value = blackScore
+        clickCount+=1
+        console.log(clickCount)
+        console.log(EventTarget)
+        return 
+    }
+    else if(clickCount == 1){
+        inputArrow2.value = blackScore
+        clickCount+=1
+        console.log(clickCount)
+        console.log(inputArrow2.innerHTML)
+        return
+    }
+    else if(clickCount == 2){
+        inputArrow3.value = blackScore
+        clickCount+=1
+        return
+    }
+    else if(clickCount == 3){
+        inputArrow4.value = blackScore
+        clickCount+=1
+        return
+    }
+    else if(clickCount == 4){
+        inputArrow5.value = blackScore
+        clickCount+=1
+        return
+    }
+}
