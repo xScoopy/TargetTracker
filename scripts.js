@@ -1,4 +1,10 @@
 let clickCount = 0;
+const whiteScore = 2
+const blackScore = 4
+const blueScore = 6
+const redScore = 8
+const yellowScore = 10
+
 // declaring constants for canvas
 let canvas = document.querySelector('canvas')
 let ctx = canvas.getContext('2d')
@@ -59,12 +65,9 @@ function calculate() {
 
 
 //defining function 'drawDot' to put a dot on the target in addition to changing the input values
-function drawDot(){
-  if(clickCount == 0){
-    arrow1.innerHTML = Element.score
-    clickCount += 1;
-    console.log(clickCount)
-    console.log(Element.score)
-  }
+function addArrow(){
+    
+    
+  
    
 }
