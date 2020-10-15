@@ -1,3 +1,4 @@
+let clickCount = 0;
 // declaring constants for canvas
 let canvas = document.querySelector('canvas')
 let ctx = canvas.getContext('2d')
@@ -56,10 +57,14 @@ function calculate() {
 
 }
 
-//defining function 'drawDot' to put a dot on the target in addition to changing the input values
 
+//defining function 'drawDot' to put a dot on the target in addition to changing the input values
 function drawDot(){
-    ctx.beginPath();
-    ctx.arc(95, 50, 40, 0, 2 * Math.PI);
-    ctx.stroke();
+  if(clickCount == 0){
+    arrow1.innerHTML = Element.score
+    clickCount += 1;
+    console.log(clickCount)
+    console.log(Element.score)
+  }
+   
 }
