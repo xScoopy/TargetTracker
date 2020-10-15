@@ -31,11 +31,11 @@ const inputArrow4 = document.querySelector('#arrow4')
 const inputArrow5 = document.querySelector('#arrow5')
 
 //adding event listeners for output display
-inputArrow1.addEventListener('input', calculate)
-inputArrow2.addEventListener('input', calculate)
-inputArrow3.addEventListener('input', calculate)
-inputArrow4.addEventListener('input', calculate)
-inputArrow5.addEventListener('input', calculate)
+inputArrow1.addEventListener('change', calculate)
+inputArrow2.addEventListener('change', calculate)
+inputArrow3.addEventListener('change', calculate)
+inputArrow4.addEventListener('change', calculate)
+inputArrow5.addEventListener('change', calculate)
 
 //adding event listeners for button clicks on target
 white.addEventListener('click', addArrowWhite)
@@ -73,13 +73,14 @@ function addArrowWhite(){
         inputArrow1.value = whiteScore
         clickCount+=1
         console.log(clickCount)
+        calculate()
         return 
     }
     else if(clickCount == 1){
         inputArrow2.value = whiteScore
         clickCount+=1
         console.log(clickCount)
-        console.log(inputArrow2.innerHTML)
+        
         return
     }
     else if(clickCount == 2){
@@ -94,40 +95,6 @@ function addArrowWhite(){
     }
     else if(clickCount == 4){
         inputArrow5.value = whiteScore
-        clickCount+=1
-        return
-    }
-}
-function addArrowBlack(){
-    if(clickCount >= 5){
-        return 
-    }
-    else if(clickCount == 0 ){
-        inputArrow1.value = blackScore
-        clickCount+=1
-        console.log(clickCount)
-        console.log(EventTarget)
-        return 
-    }
-    else if(clickCount == 1){
-        inputArrow2.value = blackScore
-        clickCount+=1
-        console.log(clickCount)
-        console.log(inputArrow2.innerHTML)
-        return
-    }
-    else if(clickCount == 2){
-        inputArrow3.value = blackScore
-        clickCount+=1
-        return
-    }
-    else if(clickCount == 3){
-        inputArrow4.value = blackScore
-        clickCount+=1
-        return
-    }
-    else if(clickCount == 4){
-        inputArrow5.value = blackScore
         clickCount+=1
         return
     }
