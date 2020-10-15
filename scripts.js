@@ -38,11 +38,11 @@ inputArrow4.addEventListener('input', calculate)
 inputArrow5.addEventListener('input', calculate)
 
 //adding event listeners for button clicks on target
-white.addEventListener('click', drawDot)
-black.addEventListener('click', drawDot)
-blue.addEventListener('click', drawDot)
-red.addEventListener('click', drawDot) 
-yellow.addEventListener('click', drawDot) 
+white.addEventListener('click', addArrowWhite)
+black.addEventListener('click', addArrowBlack)
+blue.addEventListener('click', addArrowBlue)
+red.addEventListener('click', addArrowRed) 
+yellow.addEventListener('click', addArrowYellow) 
 
 //defining function 'calculate'
 function calculate() {
