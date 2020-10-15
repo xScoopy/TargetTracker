@@ -100,7 +100,7 @@ canvas{
 /*Flex boxes for entire page*/
 #overall-container{
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
     justify-content: space-around;
     align-items: center;
 }
@@ -135,5 +135,12 @@ h1{
 }
 body{
     font-family: arial;
+    background-image: url(./images/FullSizeRender.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+button{
+    height: 100px;
+    width: 100px;
 }
 
