@@ -64,10 +64,37 @@ function calculate() {
 }
 
 
-//defining function 'drawDot' to put a dot on the target in addition to changing the input values
-function addArrow(){
-    
-    
-  
-   
+//defining function addArrow for each color to add value to the arrow slot that is next in line
+function addArrowWhite(){
+    if(clickCount >= 5){
+        return 
+    }
+    else if(clickCount == 0 ){
+        inputArrow1.value = whiteScore
+        clickCount+=1
+        console.log(clickCount)
+        return 
+    }
+    else if(clickCount == 1){
+        inputArrow2.value = whiteScore
+        clickCount+=1
+        console.log(clickCount)
+        console.log(inputArrow2.innerHTML)
+        return
+    }
+    else if(clickCount == 2){
+        inputArrow3.value = whiteScore
+        clickCount+=1
+        return
+    }
+    else if(clickCount == 3){
+        inputArrow4.value = whiteScore
+        clickCount+=1
+        return
+    }
+    else if(clickCount == 4){
+        inputArrow5.value = whiteScore
+        clickCount+=1
+        return
+    }
 }
