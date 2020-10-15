@@ -1,6 +1,11 @@
 /* Target overlaying canvas for drawing dots*/
 canvas{
     position: absolute;
+    top:50%;
+    left: 50%;
+    margin-left: -250px;
+    margin-top: -250px;
+    border-radius: 50%;
     
     
 }
@@ -131,3 +136,4 @@ h1{
 body{
     font-family: arial;
 }
+

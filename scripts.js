@@ -5,9 +5,15 @@ const blueScore = 6
 const redScore = 8
 const yellowScore = 10
 
+// declaring constant for button
+const helpButton = document.querySelector('#help')
+
 // declaring constants for canvas
 let canvas = document.querySelector('canvas')
 let ctx = canvas.getContext('2d')
+canvas.addEventListener('click', function(e) {
+    drawCircle(canvas, e)
+    })
 
 // declaring constants for target elements
 const white = document.querySelector('#white-target')
@@ -46,6 +52,8 @@ red.addEventListener('click', addArrowRed)
 yellow.addEventListener('click', addArrowYellow) 
 centerX.addEventListener('click', addArrowYellow)
 
+//adding event listener for help button
+helpButton.addEventListener('click', helpWindow)
 
 //defining function 'calculate'
 function calculate() {
@@ -78,30 +86,35 @@ function addArrowWhite(){
         inputArrow1.value = whiteScore
         clickCount+=1
         calculate()
+        canvas.style.pointerEvents = 'auto'
         return 
     }
     else if(clickCount == 1){
         inputArrow2.value = whiteScore
         clickCount+=1
         calculate()
+        canvas.style.pointerEvents = 'auto'
         return
     }
     else if(clickCount == 2){
         inputArrow3.value = whiteScore
         clickCount+=1
         calculate()
+        canvas.style.pointerEvents = 'auto'
         return
     }
     else if(clickCount == 3){
         inputArrow4.value = whiteScore
         clickCount+=1
         calculate()
+        canvas.style.pointerEvents = 'auto'
         return
     }
     else if(clickCount == 4){
         inputArrow5.value = whiteScore
         clickCount+=1
         calculate()
+        canvas.style.pointerEvents = 'auto'
         return
     }
 }
@@ -114,30 +127,35 @@ function addArrowBlack(){
         inputArrow1.value = blackScore
         clickCount+=1
         calculate()
+        canvas.style.pointerEvents = 'auto'
         return 
     }
     else if(clickCount == 1){
         inputArrow2.value = blackScore
         clickCount+=1
         calculate()
+        canvas.style.pointerEvents = 'auto'
         return
     }
     else if(clickCount == 2){
         inputArrow3.value = blackScore
         clickCount+=1
         calculate()
+        canvas.style.pointerEvents = 'auto'
         return
     }
     else if(clickCount == 3){
         inputArrow4.value = blackScore
         clickCount+=1
         calculate()
+        canvas.style.pointerEvents = 'auto'
         return
     }
     else if(clickCount == 4){
         inputArrow5.value = blackScore
         clickCount+=1
         calculate()
+        canvas.style.pointerEvents = 'auto'
         return
     }
 }
@@ -150,30 +168,35 @@ function addArrowBlue(){
         inputArrow1.value = blueScore
         clickCount+=1
         calculate()
+        canvas.style.pointerEvents = 'auto'
         return 
     }
     else if(clickCount == 1){
         inputArrow2.value = blueScore
         clickCount+=1
         calculate()
+        canvas.style.pointerEvents = 'auto'
         return
     }
     else if(clickCount == 2){
         inputArrow3.value = blueScore
         clickCount+=1
         calculate()
+        canvas.style.pointerEvents = 'auto'
         return
     }
     else if(clickCount == 3){
         inputArrow4.value = blueScore
         clickCount+=1
         calculate()
+        canvas.style.pointerEvents = 'auto'
         return
     }
     else if(clickCount == 4){
         inputArrow5.value = blueScore
         clickCount+=1
         calculate()
+        canvas.style.pointerEvents = 'auto'
         return
     }
 }
@@ -186,30 +209,35 @@ function addArrowRed(){
         inputArrow1.value = redScore
         clickCount+=1
         calculate()
+        canvas.style.pointerEvents = 'auto'
         return 
     }
     else if(clickCount == 1){
         inputArrow2.value = redScore
         clickCount+=1
         calculate()
+        canvas.style.pointerEvents = 'auto'
         return
     }
     else if(clickCount == 2){
         inputArrow3.value = redScore
         clickCount+=1
         calculate()
+        canvas.style.pointerEvents = 'auto'
         return
     }
     else if(clickCount == 3){
         inputArrow4.value = redScore
         clickCount+=1
         calculate()
+        canvas.style.pointerEvents = 'auto'
         return
     }
     else if(clickCount == 4){
         inputArrow5.value = redScore
         clickCount+=1
         calculate()
+        canvas.style.pointerEvents = 'auto'
         return
     }
 }
@@ -222,30 +250,56 @@ function addArrowYellow(){
         inputArrow1.value = yellowScore
         clickCount+=1
         calculate()
+        canvas.style.pointerEvents = 'auto'
         return 
     }
     else if(clickCount == 1){
         inputArrow2.value = yellowScore
         clickCount+=1
         calculate()
+        canvas.style.pointerEvents = 'auto'
         return
     }
     else if(clickCount == 2){
         inputArrow3.value = yellowScore
         clickCount+=1
         calculate()
+        canvas.style.pointerEvents = 'auto'
         return
     }
     else if(clickCount == 3){
         inputArrow4.value = yellowScore
         clickCount+=1
         calculate()
+        canvas.style.pointerEvents = 'auto'
         return
     }
     else if(clickCount == 4){
         inputArrow5.value = yellowScore
         clickCount+=1
         calculate()
+        canvas.style.pointerEvents = 'auto'
         return
     }
 }
+
+//Function for help window alert box
+function helpWindow(){
+    alert("Double-click on the target to add an 'arrow' to the target, and the scoreboard.")
+}
+
+//function to get cursor position used to draw a dot on the canvas
+function drawCircle(canvas, event) {
+    const rect = canvas.getBoundingClientRect()
+    const x = event.clientX - rect.left
+    const y = event.clientY - rect.top
+    //with mouse position, draw a dot
+    ctx.beginPath();
+    ctx.arc(x, y, 2, 0, 2 * Math.PI, true);
+    ctx.strokeStyle = '#1BFAD9'
+    ctx.fill()
+    ctx.stroke();
+    canvas.style.pointerEvents = 'none'
+}
+
+
