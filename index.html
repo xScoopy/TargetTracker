@@ -10,15 +10,17 @@
 <body>
     <h1>Target Tracker</h1>
     <div id='overall-container'>
-    <div id='canvas-wrap'>
-        <canvas height='500px' width='500px'></canvas>
-        <div id='target-container'>
-            <div id='white-target' score='2'>
-                <div id='black-target' score='4'>
-                    <div id='blue-target' score='6'>
-                        <div id='red-target' score='8'>
-                            <div id='yellow-target' score='10'>
-                                <div id='center-x'>x
+        <div id='canvas-wrap'>
+            
+            <div id='target-container'>
+                <div id='white-target' score='2'>
+                    <div id='black-target' score='4'>
+                        <div id='blue-target' score='6'>
+                            <div id='red-target' score='8'>
+                                <div id='yellow-target' score='10'>
+                                    <div id='center-x'>x
+                                        <canvas height='500px' width='500px'></canvas>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -26,43 +28,42 @@
                 </div>
             </div>
         </div>
-    </div>
 
-    <!--Section for possible Target-->
+        <!--Section for possible Target-->
 
-    <!--Form for User Input-->
-    <div id='main-container'>
-
+        <!--Form for User Input-->
+        <div id='main-container'>
 
 
-        <section id='form-section'>
-            <form id='arrow-form'>
-                <label for='date-picker'>Date</label>
-                <input id='date-picker' type='date'>
-                <label for='arrow1'>Arrow 1</label>
-                <input id='arrow1' type='number' value='0'>
-                <label for='arrow2'>Arrow 2</label>
-                <input id='arrow2' type='number' value='0'>
-                <label for='arrow3'>Arrow 3</label>
-                <input id='arrow3' type='number' value='0'>
-                <label for='arrow4'>Arrow 4</label>
-                <input id='arrow4' type='number' value='0'>
-                <label for='arrow5'>Arrow 5</label>
-                <input id='arrow5' type='number' value='0'>
-                
-            </form>
-        </section>
-        <section id='data-output'>
-            <label for='avg-display'>Average: </label>
-            <p>x</p>
-            <label for='total-display'>Total: </label>
-            <p>x</p>
-            <label for='min-display'>Minimum: </label>
-            <p>x</p>
-            <label for='max-display'>Maximum: </label>
-            <p>x</p>
-        </section>
-    </div>
+
+            <section id='form-section'>
+                <form id='arrow-form'>
+                    <label for='date-picker'>Date</label>
+                    <input id='date-picker' type='date'>
+                    <label for='arrow1'>Arrow 1</label>
+                    <input id='arrow1' type='number' value='0'>
+                    <label for='arrow2'>Arrow 2</label>
+                    <input id='arrow2' type='number' value='0'>
+                    <label for='arrow3'>Arrow 3</label>
+                    <input id='arrow3' type='number' value='0'>
+                    <label for='arrow4'>Arrow 4</label>
+                    <input id='arrow4' type='number' value='0'>
+                    <label for='arrow5'>Arrow 5</label>
+                    <input id='arrow5' type='number' value='0'>
+
+                </form>
+            </section>
+            <section id='data-output'>
+                <label for='avg-display'>Average: </label>
+                <p id='avg-display'>x</p>
+                <label for='total-display'>Total: </label>
+                <p id='total-display'>x</p>
+                <label for='min-display'>Minimum: </label>
+                <p id='min-display'>x</p>
+                <label for='max-display'>Maximum: </label>
+                <p id='max-display'>x</p>
+            </section>
+        </div>
     </div>
     <!--Script to 'scripts.js'-->
     <script src='scripts.js'></script>

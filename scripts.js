@@ -1,3 +1,7 @@
+// declaring constants for canvas
+let canvas = document.querySelector('canvas')
+let ctx = canvas.getContext('2d')
+
 // declaring constants for target elements
 const white = document.querySelector('#white-target')
 const black = document.querySelector('#black-target')
@@ -9,7 +13,7 @@ const yellow = document.querySelector('#yellow-target')
 const displayAverage = document.querySelector('#avg-display')
 const displayTotal = document.querySelector('#total-display')
 const displayMin = document.querySelector('#min-display')
-const displayMax = document.querySelector('max-display')
+const displayMax = document.querySelector('#max-display')
 
 // declaring input elements
 const inputDate = document.querySelector('#date-picker')
@@ -35,17 +39,27 @@ yellow.addEventListener('click', drawDot)
 
 //defining function 'calculate'
 function calculate() {
-    const arrow1 = inputArrow1.value
-    const arrow2 = inputArrow2.value
-    const arrow3 = inputArrow3.value
-    const arrow4 = inputArrow4.value
-    const arrow5 = inputArrow5.value
+    const arrow1 = parseInt(inputArrow1.value, 10)
+    const arrow2 = parseInt(inputArrow2.value, 10)
+    const arrow3 = parseInt(inputArrow3.value, 10)
+    const arrow4 = parseInt(inputArrow4.value, 10)
+    const arrow5 = parseInt(inputArrow5.value, 10)
 
-    let totalPoints = arrow1 + arrow2 +arrow3 +arrow4 + arrow5
+    const totalPoints = (arrow1 + arrow2 +arrow3 +arrow4 + arrow5)
+   
     displayTotal.innerHTML = totalPoints
 
-    displayAverage.innerHTML = toFloat(totalPoints/5)
-    displayMax.innerHTML = Math.max([arrow1, arrow2, arrow3, arrow4, arrow5])
-    displayMin.innerHTML = Math.min([arrow1, arrow2, arrow3, arrow4, arrow5])
+    displayAverage.innerHTML = totalPoints/5
+    displayMax.innerHTML = Math.max(arrow1, arrow2, arrow3, arrow4, arrow5)
+    displayMin.innerHTML = Math.min(arrow1, arrow2, arrow3, arrow4, arrow5)
     
+
+}
+
+//defining function 'drawDot' to put a dot on the target in addition to changing the input values
+
+function drawDot(){
+    ctx.beginPath();
+    ctx.arc(95, 50, 40, 0, 2 * Math.PI);
+    ctx.stroke();
 }
