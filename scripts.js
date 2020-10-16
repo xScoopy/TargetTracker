@@ -295,7 +295,7 @@ function drawCircle(canvas, event) {
     const y = event.clientY - rect.top
     //with mouse position, draw a dot
     ctx.beginPath();
-    ctx.arc(x, y, 2, 0, 2 * Math.PI, true);
+    ctx.arc(x, y, 3, 0, 2 * Math.PI, true);
     ctx.strokeStyle = '#1BFAD9'
     ctx.fill()
     ctx.stroke();
