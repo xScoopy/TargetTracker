@@ -169,7 +169,7 @@ p{
 #list-of-headers{
     display: flex;
     flex-direction: row;
-    
+    width: 50vw;
     list-style: none;
     background-color: burlywood;
 }

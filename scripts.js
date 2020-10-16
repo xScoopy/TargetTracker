@@ -307,6 +307,11 @@ function drawCircle(canvas, event) {
 }
 //delare savedata function
 function saveData(){
-    
+    document.querySelector('#dateSave').innerHTML = 'Date: ' + inputDate.value + '&nbsp'
+    document.querySelector('#arrow1save').innerHTML = ' Arrow 1: '+ inputArrow1.value + '&nbsp;'
+    document.querySelector('#arrow2save').innerHTML = ' Arrow 2: '+ inputArrow2.value + '&nbsp;'
+    document.querySelector('#arrow3save').innerHTML = ' Arrow 3: '+ inputArrow3.value + '&nbsp;'
+    document.querySelector('#arrow4save').innerHTML = ' Arrow 4: '+ inputArrow4.value + '&nbsp;'
+    document.querySelector('#arrow5save').innerHTML = ' Arrow 5: '+ inputArrow5.value + '&nbsp; '
 }
 
