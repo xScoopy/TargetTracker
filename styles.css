@@ -142,5 +142,19 @@ body{
 button{
     height: 100px;
     width: 100px;
+    border-radius: 25%;
 }
-
+#date-picker{
+    width: auto;
+}
+label{
+    background-color: darkgray;
+    width: 5em;
+    border-radius: 25%;
+    text-align: center;
+}
+p{
+    background-color: lightgray;
+    text-align: center;
+    border-radius: 50%;
+}
