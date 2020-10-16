@@ -15,4 +15,4 @@ My motivation for this project was to help out my younger brother with his arche
 
 Screenshots:
 
-![TargetTracker]
+![TargetTracker](https://github.com/xScoopy/TargetTracker/blob/main/images/Screenshot.png)
