@@ -13,7 +13,7 @@
         <div id='canvas-wrap'>
 
             <div id='target-container'>
-                
+
                 <div id='white-target'></div>
                 <div id='black-target'></div>
                 <div id='blue-target'></div>
@@ -21,7 +21,7 @@
                 <div id='yellow-target'></div>
                 <div id='center-x'><b>x</b></div>
                 <canvas height='500px' width='500px'></canvas>
-            
+
             </div>
         </div>
 
@@ -46,6 +46,7 @@
                     <input id='arrow4' type='number' value='0'>
                     <label for='arrow5'>Arrow 5</label>
                     <input id='arrow5' type='number' value='0'>
+                    <button id='save'>Save</button>
 
                 </form>
             </section>
@@ -59,11 +60,24 @@
                 <label for='max-display'>Maximum: </label>
                 <p id='max-display'>x</p>
             </section>
-            
+
         </div>
         <button id='help'>Help!</button>
     </div>
-    
+    <section id='save-area'>
+        <ul id='list-of-headers'>
+            <li id=dateSave></li>
+            <li id=arrow1save></li>
+            <li id=arrow2save></li>
+            <li id=arrow2save></li>
+            <li id=arrow3save></li>
+            <li id=arrow4save></li>
+            <li id=arrow5save></li>
+        </ul>
+
+    </section>
+
+
     <!--Script to 'scripts.js'-->
     <script src='scripts.js'></script>
 </body>

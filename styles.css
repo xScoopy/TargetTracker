@@ -111,12 +111,16 @@ canvas{
     margin-left: 2em;
     margin-right: 2em;
     margin-top: 2em;
+    align-items: center;
     
 }
 /*arranging form*/
 #arrow-form{
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
     
 }
 /*input spacing*/
@@ -139,7 +143,7 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
 }
-button{
+#help{
     height: 100px;
     width: 100px;
     border-radius: 25%;
@@ -157,4 +161,15 @@ p{
     background-color: lightgray;
     text-align: center;
     border-radius: 50%;
+}
+#button{
+    width: 4em;
+}
+/*Area for saved array to be printed*/
+#list-of-headers{
+    display: flex;
+    flex-direction: row;
+    
+    list-style: none;
+    background-color: burlywood;
 }

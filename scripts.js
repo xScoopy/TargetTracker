@@ -1,3 +1,4 @@
+//ClickCount and score holder variables
 let clickCount = 0;
 const whiteScore = 2
 const blackScore = 4
@@ -7,6 +8,7 @@ const yellowScore = 10
 
 // declaring constant for button
 const helpButton = document.querySelector('#help')
+const saveButton = document.querySelector('#save')
 
 // declaring constants for canvas
 let canvas = document.querySelector('canvas')
@@ -22,6 +24,7 @@ const blue = document.querySelector('#blue-target')
 const red = document.querySelector('#red-target')
 const yellow = document.querySelector('#yellow-target')
 const centerX = document.querySelector('#center-x')
+
 
 // declaring display output fields
 const displayAverage = document.querySelector('#avg-display')
@@ -52,8 +55,9 @@ red.addEventListener('click', addArrowRed)
 yellow.addEventListener('click', addArrowYellow) 
 centerX.addEventListener('click', addArrowYellow)
 
-//adding event listener for help button
+//adding event listener for help and save buttons
 helpButton.addEventListener('click', helpWindow)
+saveButton.addEventListener('click', saveData)
 
 //defining function 'calculate'
 function calculate() {
@@ -301,5 +305,8 @@ function drawCircle(canvas, event) {
     ctx.stroke();
     canvas.style.pointerEvents = 'none'
 }
-
+//delare savedata function
+function saveData(){
+    
+}
 
