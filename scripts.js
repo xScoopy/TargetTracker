@@ -83,7 +83,7 @@ function calculate() {
 function addArrowWhite(){
     if(clickCount >= 5){
         calculate()
-        alert('You already have 5 arrows! Refresh the page to do another 5')
+        alert('Please click the "save" button to reset the arrow count for another 5 shots')
         return 
     }
     else if(clickCount == 0 ){
@@ -124,7 +124,7 @@ function addArrowWhite(){
 }
 function addArrowBlack(){
     if(clickCount >= 5){
-        alert('You already have 5 arrows! Refresh the page to do another 5')
+        alert('Please click the "save" button to reset the arrow count for another 5 shots')
         return 
     }
     else if(clickCount == 0 ){
@@ -165,7 +165,7 @@ function addArrowBlack(){
 }
 function addArrowBlue(){
     if(clickCount >= 5){
-        alert('You already have 5 arrows! Refresh the page to do another 5')
+        alert('Please click the "save" button to reset the arrow count for another 5 shots')
         return 
     }
     else if(clickCount == 0 ){
@@ -206,7 +206,7 @@ function addArrowBlue(){
 }
 function addArrowRed(){
     if(clickCount >= 5){
-        alert('You already have 5 arrows! Refresh the page to do another 5')
+        alert('Please click the "save" button to reset the arrow count for another 5 shots')
         return 
     }
     else if(clickCount == 0 ){
@@ -247,7 +247,7 @@ function addArrowRed(){
 }
 function addArrowYellow(){
     if(clickCount >= 5){
-        alert('You already have 5 arrows! Refresh the page to do another 5')
+        alert('Please click the "save" button to reset the arrow count for another 5 shots')
         return 
     }
     else if(clickCount == 0 ){
@@ -289,7 +289,7 @@ function addArrowYellow(){
 
 //Function for help window alert box
 function helpWindow(){
-    alert("Double-click on the target to add an 'arrow' to the target, and the scoreboard.")
+    alert("Double-click on the target to add an 'arrow' to the target, and the scoreboard. Click 'Save' Button to log scores below, clear the target, and take another 5 shots")
 }
 
 //function to get cursor position used to draw a dot on the canvas
@@ -312,6 +312,9 @@ function saveData(){
     document.querySelector('#arrow2save').innerHTML = ' Arrow 2: '+ inputArrow2.value + '&nbsp;'
     document.querySelector('#arrow3save').innerHTML = ' Arrow 3: '+ inputArrow3.value + '&nbsp;'
     document.querySelector('#arrow4save').innerHTML = ' Arrow 4: '+ inputArrow4.value + '&nbsp;'
-    document.querySelector('#arrow5save').innerHTML = ' Arrow 5: '+ inputArrow5.value + '&nbsp; '
+    document.querySelector('#arrow5save').innerHTML = ' Arrow 5: '+ inputArrow5.value + '&nbsp;'
+    document.getElementById('arrow-form').reset();
+    clickCount = 0;
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
 }
 
